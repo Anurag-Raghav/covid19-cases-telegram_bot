@@ -24,7 +24,7 @@ const options = {
     request(`https://disease.sh/v3/covid-19/countries/${countryname}`,function(error,response,body){
         if(!error){
             const res=JSON.parse(body);
-            if (res.message=='Country not found or doesnt have any cases') {
+            if (!res.countryInfo) {
                 bot.sendMessage(chatID, 'Invalid country name.', {reply_to_message_id: msg.message_id});
                 return;
             }
