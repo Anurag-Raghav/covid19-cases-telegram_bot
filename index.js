@@ -11,7 +11,7 @@ const options = {
   
     bot.onText(/\/start/, (msg) => {
 
-    bot.sendMessage(msg.chat.id, "working ");
+    bot.sendMessage(msg.chat.id, "Please enter the country name for the covid cases count.. ");
         
     });
     bot.setWebHook(`${url}/bot${token}`);
@@ -38,7 +38,7 @@ const options = {
              const active=res.active;
              const critical=res.critical;
              bot.sendPhoto(chatID,flag);
-             bot.sendMessage(chatID,`Total cases: ${cases}\ntoday cases:${today_cases}\nTotal Deaths:${deaths}\nToday Deaths${today_deaths}\nTotal Recovered:${recovered}\nToday Recoeverd:${today_recovered}\nTotal Active:${active}\nCritical Cases:${critical}`);
+             bot.sendMessage(chatID, `Total cases: ${cases}\nToday cases:${today_cases}\nTotal Deaths:${deaths}\nToday Deaths:${today_deaths}\nTotal Recovered:${recovered}\nToday Recoeverd:${today_recovered}\nTotal Active:${active}\nCritical Cases:${critical}`);
         }else{
             console.log(error);
         }
