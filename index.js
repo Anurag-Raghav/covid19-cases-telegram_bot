@@ -31,10 +31,18 @@ const options = {
              const flag=res.countryInfo.flag;
              const cases=res.cases;
              const today_cases=res.todayCases;
+             const deaths=res.deaths;
+             const today_deaths=res.todayDeaths;
+             const recovered=res.recovered;
+             const today_recovered=res.todayRecovered
+             const active=res.active;
+             const critical=res.critical;
              bot.sendPhoto(chatID,flag);
-             bot.sendMessage(chatID,`Total_cases: ${cases}\ntoday_cases:-${today_cases}`);
+             bot.sendMessage(chatID,`Total cases: ${cases}\ntoday cases:${today_cases}\nTotal Deaths:${deaths}\nToday Deaths${today_deaths}\nTotal Recovered:${recovered}\nToday Recoeverd:${today_recovered}\nTotal Active:${active}\nCritical Cases:${critical}`);
         }else{
             console.log(error);
         }
     })
 });
+
+
