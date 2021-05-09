@@ -1,7 +1,7 @@
 const telegrambot=require('node-telegram-bot-api');
 require('dotenv').config();
 const request= require('request');
-const token=process.env.TOKEN_KEY;
+const token=process.env.TOKEN_KEY || '1864197850:AAH-g-QwmNqnXbEo_4j90TB7LJ05VilzBt4';
 const options = {
     webHook: {
       port: process.env.PORT
