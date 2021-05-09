@@ -7,7 +7,7 @@ const options = {
       port: process.env.PORT
     }
   }; 
-  const url = process.env.APP_URL || 'https://covid19goldyy.com:443';
+  const url = process.env.APP_URL || 'https://covid19goldyy.herokuapp.com:443';
   const bot = new telegrambot(token, options);
   bot.setWebHook(`${url}/bot${token}`);
     bot.onText(/\/start/, (msg) => {
