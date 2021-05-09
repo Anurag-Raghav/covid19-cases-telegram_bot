@@ -24,7 +24,7 @@ const options = {
     request(`https://disease.sh/v3/covid-19/countries/${countryname}`,function(error,response,body){
         if(!error){
             const res=JSON.parse(body);
-            if (res.cod === '404') {
+            if (res.status=== '404') {
                 bot.sendMessage(chatID, 'Invalid country name.', {reply_to_message_id: msg.message_id});
                 return;
             }
@@ -40,7 +40,7 @@ const options = {
              bot.sendPhoto(chatID,flag);
              bot.sendMessage(chatID, `Total cases: ${cases}\nToday cases:${today_cases}\nTotal Deaths:${deaths}\nToday Deaths:${today_deaths}\nTotal Recovered:${recovered}\nToday Recoeverd:${today_recovered}\nTotal Active:${active}\nCritical Cases:${critical}`);
         }else{
-            bot.sendMessage(chatID, 'Invalid country name.', {reply_to_message_id: msg.message_id});
+            console.log(error);
         }
     })
 });
