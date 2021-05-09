@@ -8,13 +8,13 @@ const options = {
   }; 
   const url = process.env.APP_URL || 'https://covid19goldyy.herokuapp.com:443';
   const bot = new telegrambot(token, options);
-  bot.setWebHook(`${url}/bot${token}`);
+  
     bot.onText(/\/start/, (msg) => {
 
     bot.sendMessage(msg.chat.id, "working ");
         
     });
-
+    bot.setWebHook(`${url}/bot${token}`);
     bot.on('message', msg => { 
     if (msg.text === '/start') {
         return;
