@@ -38,7 +38,7 @@ const options = {
              const active=res.active;
              const critical=res.critical;
              bot.sendPhoto(chatID,flag);
-             bot.sendMessage(chatID, `Total cases: ${cases}\nToday cases:${today_cases}\nTotal Deaths:${deaths}\nToday Deaths:${today_deaths}\nTotal Recovered:${recovered}\nToday Recoeverd:${today_recovered}\nTotal Active:${active}\nCritical Cases:${critical}`);
+             bot.sendMessage(chatID, `Total cases: ${cases}\nToday cases:${today_cases}\nTotal Deaths:${deaths}\nToday Deaths:${today_deaths}\nTotal Recovered:${recovered}\nToday Recovered:${today_recovered}\nTotal Active:${active}\nCritical Cases:${critical}`);
         }else{
             console.log(error);
         }
